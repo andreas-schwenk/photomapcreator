@@ -1,17 +1,20 @@
 # Photo Map Creator
 
-_Photo Map Creator_ is a small tool written in Python 3. It parses a photo directory and creates an HTML document that shows all photo positions into a map. We use OpenLayers to render maps.
+_Photo Map Creator_ is a small tool written in [Python 3](https://www.python.org/download/releases/3.0/).
+It parses a photo directory and creates an HTML document that shows all GPS positions within an embedded map.
+We use [OpenLayers](https://openlayers.org) to render maps.
 
 ## Example Output
 
 The following screenshot shows an example output.
-A corresponding HTML document can be found in `maps/fuerteventura2015.html` of this repository.
+A corresponding HTML document can be found in this repository [here](maps/fuerteventura2015.html).
 
 ![alt text](screenshots/fuerteventura2015.png)
 
 ## Dependencies
 
-_Photo Map Creator_ makes use of the following dependencies:
+[Python 3](https://www.python.org/download/releases/3.0/) must be installed in order to run _Photo Map Creator_.
+Furthermore you need at least the first of the following dependencies:
 
 * `gpsphoto`: Install it via `pip3 install gpsphoto`.
 * `exiftool`: This dependency is optional. It is only needed, if you like to process non-JPEG input images (e.g. Apple HEIC). Install it in Linux via `sudo apt-get exiftool`.
