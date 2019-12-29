@@ -18,7 +18,7 @@ _Photo Map Creator_ makes use of the following dependencies:
 
 ## Usage
 
-You can run _Photo Map Creator_ by either CLI or GUI:
+You can run _Photo Map Creator_ by either CLI or GUI. The output is always written into the `maps/` directory.
 
 ### Command Line Interface (CLI)
 
