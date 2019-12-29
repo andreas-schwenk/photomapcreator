@@ -37,7 +37,7 @@ from tkinter import filedialog
 from tkinter import messagebox
 import distutils.spawn
 
-# exiftool is optional and only needed for non-JPEG pictures
+# exiftool is optional and only needed for non-JPEG pictures (e.g. Apple HEIF)
 # (install it in linux via  $sudo apt-get exiftool)
 EXIFTOOL_INSTALLED = distutils.spawn.find_executable("exiftool") != None
 
@@ -213,7 +213,7 @@ if __name__ == '__main__':
 		view_lat = sys.argv[2] # 52.3667
 		view_lon = sys.argv[3] # 4.8945
 		photo_directory = sys.argv[5]
-		process()
+		process(location_name, view_zoom, view_lat, view_lon, photo_directory)
 
 	else:
 		print('usage: /usr/local/bin/python3 create-photo-map.py LOCATION_NAME GPS_LATITUDE GPS_LONGITUDE ZOOM PHOTO_DIRECTORY')
