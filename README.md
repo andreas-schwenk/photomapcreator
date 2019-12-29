@@ -45,10 +45,10 @@ python3 photo-map-creator.py amsterdam 52.3667 4.8945 15 /Users/andi/Pictures/20
 
 ### Graphical User Interface (GUI)
 
-Start as follows.
+Start as follows:
 
 ```
 python3 photo-map-creator.py
 ```
 
-Parameters are same as with the command line interface.
+The set of parameters is same as with the command line interface, but set by textfields and a directory dialog.
