@@ -1,25 +1,24 @@
 # Photo Map Creator
 
-_Photo Map Creator_ is a small tool written in Python 3 that parses a photo directory and creates an HTML document that renders all photo positions into a map. We use OpenLayers to display maps.
+_Photo Map Creator_ is a small tool written in Python 3. It parses a photo directory and creates an HTML document that shows all photo positions into a map. We use OpenLayers to render maps.
 
 ## Example Output
 
 The following screenshot shows an example output.
-A corresponding HTML document can be found in maps/fuerteventura2015.html
+A corresponding HTML document can be found in `maps/fuerteventura2015.html` of this repository.
 
 ![alt text](screenshots/fuerteventura2015.png)
 
 ## Dependencies
 
-_Photo Map Creator_ makes use of the following Dependencies:
+_Photo Map Creator_ makes use of the following dependencies:
 
-* `gpsphoto`. Install it via `pip3 install gpsphoto`.
-
-* `exiftool`. This dependency is optional and only needed if you have input images that are not in JPEG format (e.g. Apple HEIC). Install it in Linux via `sudo apt-get exiftool`.
+* `gpsphoto`: Install it via `pip3 install gpsphoto`.
+* `exiftool`: This dependency is optional. It is only needed, if you like to process non-JPEG input images (e.g. Apple HEIC). Install it in Linux via `sudo apt-get exiftool`.
 
 ## Usage
 
-You can run _Photo Map Creator_ by either CLI or GUI.
+You can run _Photo Map Creator_ by either CLI or GUI:
 
 ### Command Line Interface (CLI)
 
@@ -30,10 +29,16 @@ python3 photo-map-creator.py OUTPUT_FILENAME GPS_LATITUDE GPS_LONGITUDE ZOOM PHO
 The parameters are given below:
 
 * `OUTPUT_FILENAME`: Name of the output file. The postfix `.html` added by the tool.
-* `GPS_LATITUDE`: Decimal Latitude for the initial view. If `0.0` is given, that the latitude from the first photo is taken.
-* `GPS_LONGITUDE`: Decimal Latitude for the initial view. If `0.0` is given, that the Longitude from the first photo is taken.
+* `GPS_LATITUDE`: Signed decimal Latitude for the initial view. If `0.0` is given, that the latitude from the first photo is taken.
+* `GPS_LONGITUDE`: Signed decimal Latitude for the initial view. If `0.0` is given, that the Longitude from the first photo is taken.
 * `ZOOM`: Zoom value for the initial view. E.g. 15
 * `PHOTO_DIRECTORY`: Path to your photos.
+
+Example:
+
+```
+python3 photo-map-creator.py amsterdam 52.3667 4.8945 15 /Users/andi/Pictures/2019/Amsterdam
+```
 
 ### Graphical User Interface (GUI)
 
