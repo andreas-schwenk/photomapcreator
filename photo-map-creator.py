@@ -31,7 +31,7 @@ import os
 import glob
 import subprocess
 import time
-from GPSPhoto import gpsphoto      # pip3 install gpsphoto
+from GPSPhoto import gpsphoto      # pip3 install gpsphoto piexif
 import tkinter as tk
 from tkinter import filedialog
 from tkinter import messagebox
