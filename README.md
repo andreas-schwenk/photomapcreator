@@ -16,7 +16,7 @@ A corresponding HTML document can be found in this repository [here](maps/fuerte
 [Python 3](https://www.python.org/download/releases/3.0/) must be installed in order to run _Photo Map Creator_.
 Furthermore you need at least the first of the following dependencies:
 
-* `gpsphoto`: Install it via `pip3 install gpsphoto`.
+* `gpsphoto`: Install it via `pip3 install gpsphoto piexif exifread pillow`.
 * `exiftool`: This dependency is optional. It is only needed, if you like to process non-JPEG input images (e.g. Apple HEIC). Install it in Linux via `sudo apt-get exiftool`.
 
 ## Usage
