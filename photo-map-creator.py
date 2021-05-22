@@ -31,7 +31,7 @@ import os
 import glob
 import subprocess
 import time
-from GPSPhoto import gpsphoto      # pip3 install gpsphoto piexif exifread pillow
+from GPSPhoto import gpsphoto      # pip3 install gpsphoto piexif exifread pillow  # brew install python-tk
 import tkinter as tk
 from tkinter import filedialog
 from tkinter import messagebox
