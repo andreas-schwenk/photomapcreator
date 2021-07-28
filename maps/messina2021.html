@@ -1,0 +1,58 @@
+
+	<html>
+		<head>
+			<title>messina2021</title>
+			<script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+		</head>
+		<body>
+			<div id="mapdiv"></div>
+			<script>
+				map = new OpenLayers.Map("mapdiv");
+				map.addLayer(new OpenLayers.Layer.OSM());
+
+				var markers = new OpenLayers.Layer.Markers("Markers");
+				map.addLayer(markers);
+
+				function add(lat, lon) {
+					var size = new OpenLayers.Size(16,16);
+					var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+					var icon = new OpenLayers.Icon('../img/marker.png',size,offset);
+					var lonLat = new OpenLayers.LonLat(lon, lat).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject() );
+					var marker = new OpenLayers.Marker(lonLat, icon);
+					markers.addMarker(marker);
+				}
+				
+			add(38.191292,15.546825);
+			add(38.187786,15.556281);
+			add(38.1885,15.55895);
+			add(38.188494,15.55895);
+			add(38.185558,15.560103);
+			add(38.192031,15.554392);
+			add(38.192844,15.554761);
+			add(38.193942,15.554353);
+			add(38.191906,15.554383);
+			add(38.193686,15.554111);
+			add(38.192189,15.554628);
+			add(38.192142,15.554667);
+			add(38.194039,15.554131);
+			add(38.188106,15.559631);
+			add(38.192731,15.555017);
+			add(38.188503,15.558939);
+			add(38.185514,15.560453);
+			add(38.194039,15.554131);
+			add(38.189392,15.545844);
+			add(38.188697,15.552997);
+			add(38.1885,15.55895);
+			add(38.189869,15.545961);
+			add(38.188878,15.5541);
+			add(38.190003,15.549639);
+			add(38.193756,15.554089);
+			add(38.188503,15.558939);
+
+				var centerLonLat = new OpenLayers.LonLat(15.546825,38.191292).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject() );
+				var zoom = 14;
+				map.setCenter (centerLonLat, zoom);
+			</script>
+		</body>
+	</html>
+	
